@@ -89,8 +89,10 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6115
-TARGET_KERNEL_CONFIG := vendor/juice-perf_defconfig
+TARGET_KERNEL_CONFIG := vendor/chime_defconfig
 TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 LLVM_IAS=1
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/nexus-clang
+TARGET_KERNEL_CLANG_VERSION := nexus
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true

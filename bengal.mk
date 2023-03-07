@@ -275,6 +275,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.camera.perflock.enable=0 \
+
 # Charger
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.charger.enable_suspend=1
